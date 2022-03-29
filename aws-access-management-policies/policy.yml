@@ -1,0 +1,17 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  MyPolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: MyTestPolicy2
+      Users:
+        - foo
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          Effect: Allow
+          Action:
+            - logs:CreateLogGroup
+            - logs:CreateLogStream
+            - logs:PutLogEvents"
+          Resource: '*'

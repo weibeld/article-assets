@@ -1,0 +1,33 @@
+{
+   "Version": "2012-10-17",
+   "Statement": [
+      {
+         "Effect": "Allow",
+         "Action": [
+            "s3:ListBucket",
+            "s3:GetObject"
+         ],
+         "Principal": {
+            "AWS": [
+               "arn:aws:iam::202449302273:user/user1",
+               "arn:aws:iam::202449302273:user/user2"
+            ]
+         },
+         "Resource": [
+            "arn:aws:s3:::quantumsense-my-bucket",
+            "arn:aws:s3:::quantumsense-my-bucket/*"
+         ]
+      },
+      {
+         "Effect": "Allow",
+         "Action": [
+            "s3:PutObject",
+            "s3:DeleteObject"
+         ],
+         "Principal": {
+            "AWS": "arn:aws:iam::202449302273:user/user2"
+         },
+         "Resource": "arn:aws:s3:::quantumsense-my-bucket/*"
+      }
+   ]
+}

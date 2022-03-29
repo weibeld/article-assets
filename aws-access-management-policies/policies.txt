@@ -1,0 +1,33 @@
+A policy is an entity that contains permissions and is attached to an identity or resource.
+
+Permissions are based on the granularity of individual API calls to the different AWS services.
+
+- Identity-based policies
+    - Attached to principal entities (users, groups, and roles)
+    - Types:
+        - Managed policies (have their own ARN)
+            - AWS managed policies
+            - Customer managed policies
+        - Inline policies
+- Resource-based policies
+    - All resource-based policies are inline policies
+
+Defining policies in CloudFormation: use the visual editor (https://console.aws.amazon.com/iam/home?#/policies$new?step=edit) to define the policy, display the generated JSON, and translate it to YAML.
+
+If you want to write policies directly in JSON, the reference is here:
+https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_grammar.html
+
+As a best practice, break up policies by resource type
+
+2008-10-17
+2012-10-17
+
+
+- Amazon S3
+- Amazon SNS
+- Amazon SQS
+- AWS Lambda
+- Amazon API Gateway
+- AWS Secrets Manager
+- AWS KMS
+- Amazon ECR

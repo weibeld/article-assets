@@ -1,0 +1,16 @@
+{
+ "Version": "2012-10-17",
+ "Statement": {
+   "Effect": "Allow",
+   "Action": [
+     "sts:AssumeRole"
+   ],
+   "Principal": {
+     "AWS": "arn:aws:iam::202449302273:user/Daniel",
+     "Service": [
+       "ec2.amazonaws.com",
+       "lambda.amazonaws.com"
+     ]
+   }
+ }
+}
